@@ -190,9 +190,9 @@
     }
     
     #bio-container {
+        min-height:30vh;
         border-right: none;
         border-bottom: 5px solid #293544;
-        max-height: 20%;
         padding: 10px 5px;
     }
 
