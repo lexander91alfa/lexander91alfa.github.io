@@ -1,3 +1,234 @@
-h1 {
-    color: blue;
+/* Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Geral */
+
+.highlight {
+    color: #0da343;
+}
+
+/* Container */
+
+#container {
+    display: flex;
+    flex-direction: row;
+    color: #FFF;
+}
+
+#bio-container {
+    flex: 1 1 20%;
+    min-height: 100vh;
+    background-color: #1E2A3A;
+    text-align: center;
+    padding: 30px 12px;
+    border-right: 5px solid #293544;
+}
+
+#about-container {
+    flex: 1 1 80%;
+    height: 100%;
+    background-color: #111821;
+    padding: 50px;
+}
+
+/* bio container */
+
+#bio-img {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+#bio-container h2 {
+    margin-bottom: 25px;
+}
+
+#bio-container p {
+    margin-bottom: 20px;
+}
+
+#bio-container #welcome-text {
+    font-weight: bold;
+}
+
+#social-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border-bottom: 1px solid #293544;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+#social-container li {
+    flex: 1 1 0;
+}
+
+#social-container li a {
+    color: #0e76a8;
+    font-size: 30px;
+}
+
+#social-container li a img {
+    width: 20px;
+}
+
+#email-container {
+    display: flex;
+    justify-content: center;
+}
+
+#email-container ion-icon #email-container a {
+    flex: 1 1 0;
+}
+
+#email-container a {
+    text-decoration: none;
+    color: #FFF;
+    max-width: 225px;
+}
+
+
+#email-container ion-icon {
+    color: burlywood;
+    font-size: 20 px;
+    margin-right: 5px;
+    max-width: 20px;
+}
+
+
+/* about container */
+
+#name {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.description {
+    max-width: 75%;
+    margin-bottom: 10px;
+}
+
+#github-projects {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    margin: 25px 0;
+    padding: 12px 10px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    border: 2px solid #FFF;
+    background-color: green;
+}
+
+#github-projects img #github-projects span {
+    flex: 1 1 0;
+}
+
+#github-projects img {
+    font-size: 20px;
+    max-width: 20px;
+    padding-right: 5px;
+}
+
+#github-projects:hover {
+    background-color: #006400;
+}
+
+#skills-section-title {
+    border-top: 1px solid white;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.skills-box {
+    flex: 1 1 33%;
+    max-width: 33%;
+    margin: 10px;
+    align-self: inherit;
+}
+
+.skills-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    padding-left: 2px;
+    border-left: 2px solid green;
+}
+
+.skills-box img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+@media(max-width: 450px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #bio-container {
+        border-right: none;
+        border-bottom: 5px solid #293544;
+    }
+
+    #bio-container h2 {
+        display: none;
+    }
+
+    #bio-container p {
+        max-width: 60%;
+        margin: 10px auto;
+    }
+
+    #about-container {
+        text-align: center;
+        padding: 30px;
+    }
+
+    #about-container .description {
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
+    }
+
+    #github-projects {
+        margin: 20px auto;
+    }
+
+    .skills-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .skills-box img {
+        height: 60px;
+        width: 60px;
+    }
 }
