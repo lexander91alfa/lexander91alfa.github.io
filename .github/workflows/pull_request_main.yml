@@ -1,0 +1,22 @@
+name: Cria pull request automaticamente para main
+
+on:
+    workflow_run:
+        workflows: ["CI"]
+        types:
+            - completed
+
+jobs:
+    create_pull_request:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Create Pull Request
+              uses: peter-evans/create-pull-request@v3
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                branch: main
+                title: 'Pull request automatico'
+                body: 'Criando automaticamente'
